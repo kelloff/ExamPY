@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+    
+    <form action="/posts" method="post" class="forma">
+        <div class="posti">
+            <h1>Write a Post</h1>
+            <p><textarea name="comment" id="comment" style="max-width: 301px; max-height: 113px;"></textarea></p>
+            
+            
+            <input type="submit" value="Post It!" id="b1">
+        </div>
+    </form>
+
+    <div class="d1">
+        {% for i in posts %}
+            <div class="post">
+                <p> {{i["text"]}}</p>
+                <p> {{i["user"]}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
