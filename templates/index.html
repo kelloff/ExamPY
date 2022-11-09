@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+
+    <form action="/" method="post" class="forma">
+        <div class="reg">
+            <h2>Login ZH</h2>
+            {% if error %}
+                <span style="color: red; margin-bottom: 10px;">{{error}}</span>
+            {% endif %}
+            <div class="reg_field">
+                <input type="text" name="log" class="i" required="">
+                <label>Username</label>
+            </div>
+            <br>
+            <div class="reg_field">
+                <input type="password" name="pass" class="i" required="">
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login in" id="b1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </input>
+        </div>
+    </form>
+
+</body>
+</html>
